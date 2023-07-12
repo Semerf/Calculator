@@ -1,10 +1,10 @@
 package main.interfaces.impl;
 
-import main.interfaces.IOTool;
+import main.interfaces.IOToolService;
 
 import java.util.Scanner;
 
-public class IOConsoleService implements IOTool {
+public class IOConsoleServiceImpl implements IOToolService {
 
     @Override
     public String[] readAndSplit() throws Exception {

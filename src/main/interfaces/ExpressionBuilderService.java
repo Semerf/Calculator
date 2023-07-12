@@ -1,7 +1,7 @@
 package main.interfaces;
 
-import main.ArithmeticExpression;
+import main.models.ArithmeticExpression;
 
-public interface ExpressionBuilder {
+public interface ExpressionBuilderService {
     ArithmeticExpression constructExpressionFromArrayInputStrings(String[] strs) throws Exception;
 }

@@ -1,11 +1,11 @@
 package main.interfaces.impl;
 
-import main.interfaces.NumeralTranslator;
+import main.interfaces.NumeralTranslatorService;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class RomanNumeralTranslator implements NumeralTranslator {
+public class RomanNumeralTranslatorServiceImpl implements NumeralTranslatorService {
     @Override
     public int translateToInt(String str) throws Exception {
         byte[] symbols = str.getBytes();

@@ -1,23 +1,23 @@
 package main.interfaces.impl;
 
-import main.interfaces.ExpressionBuilder;
-import main.interfaces.NumeralTranslator;
-import main.ArithmeticExpression;
+import main.interfaces.ExpressionBuilderService;
+import main.interfaces.NumeralTranslatorService;
+import main.models.ArithmeticExpression;
 
-public class BuildExpressionService implements ExpressionBuilder {
+public class BuildExpressionServiceImpl implements ExpressionBuilderService {
     @Override
     public ArithmeticExpression constructExpressionFromArrayInputStrings(String[] InputLines) throws Exception {
         boolean isRoman;
         int firstInt;
         int secondInt;
         char operation;
-        NumeralTranslator numeralTranslator;
+        NumeralTranslatorService numeralTranslator;
         if (isRomanCheck(InputLines[0].getBytes()[0])) {
             isRoman = true;
-            numeralTranslator = new RomanNumeralTranslator();
+            numeralTranslator = new RomanNumeralTranslatorServiceImpl();
         } else if (isArabicCheck(InputLines[0].getBytes()[0])) {
             isRoman = false;
-            numeralTranslator = new ArabicNumeralTranslator();
+            numeralTranslator = new ArabicNumeralTranslatorServiceImpl();
         } else {
             throw new Exception("impossible to define");
         }

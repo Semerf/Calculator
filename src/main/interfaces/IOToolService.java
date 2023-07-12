@@ -1,6 +1,6 @@
 package main.interfaces;
 
-public interface IOTool {
+public interface IOToolService {
     String[] readAndSplit() throws Exception;
 
     void write(String str);
