@@ -1,10 +1,10 @@
 package main;
 
 public class ArithmeticExpression {
-    private int firstInt;
-    private int secondInt;
-    private char operation;
-    private boolean isRoman;
+    private final int firstInt;
+    private final int secondInt;
+    private final char operation;
+    private final boolean isRoman;
 
     public ArithmeticExpression(int firstInt, int secondInt, char operation, boolean isRoman) {
         this.firstInt = firstInt;

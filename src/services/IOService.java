@@ -2,7 +2,6 @@ package services;
 
 import interfaces.IOutil;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class IOService implements IOutil {

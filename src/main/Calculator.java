@@ -24,7 +24,7 @@ public class Calculator {
             }
             ioutil.write(translator.translateToString(result));
         } catch (Exception e){
-            System.err.println(e);
+            System.out.println(e);
             System.exit(-1);
         }
     }
@@ -44,7 +44,7 @@ public class Calculator {
                 result = expression.getFirstInt()*expression.getSecondInt();
                 break;
         }
-        if(result < 1 && expression.isRoman() == true) {
+        if(result < 1 && expression.isRoman()) {
             throw new Exception("Roman numerals cannot be less than 1");
         }
 
