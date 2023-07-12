@@ -1,4 +1,4 @@
-package main.services;
+package main.service;
 
 public interface NumeralTranslatorService {
     int translateToInt(String str) throws Exception;

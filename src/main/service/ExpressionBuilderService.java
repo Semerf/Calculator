@@ -1,6 +1,6 @@
-package main.services;
+package main.service;
 
-import main.models.ArithmeticExpression;
+import main.model.ArithmeticExpression;
 
 public interface ExpressionBuilderService {
     ArithmeticExpression constructExpressionFromArrayInputStrings(String[] strs) throws Exception;

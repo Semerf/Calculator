@@ -1,6 +1,6 @@
-package main.services.impl;
+package main.service.impl;
 
-import main.services.NumeralTranslatorService;
+import main.service.NumeralTranslatorService;
 
 public class ArabicNumeralTranslatorServiceImpl implements NumeralTranslatorService {
     @Override

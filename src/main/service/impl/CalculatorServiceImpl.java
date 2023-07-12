@@ -1,7 +1,7 @@
-package main.services.impl;
+package main.service.impl;
 
-import main.services.CalculatorService;
-import main.models.ArithmeticExpression;
+import main.service.CalculatorService;
+import main.model.ArithmeticExpression;
 
 public class CalculatorServiceImpl implements CalculatorService {
     public int calculate(ArithmeticExpression expression) throws Exception {

@@ -1,15 +1,15 @@
 package main;
 
-import main.services.CalculatorService;
-import main.services.ExpressionBuilderService;
-import main.services.IOToolService;
-import main.services.NumeralTranslatorService;
-import main.services.impl.ArabicNumeralTranslatorServiceImpl;
-import main.services.impl.BuildExpressionServiceImpl;
-import main.services.impl.CalculatorServiceImpl;
-import main.services.impl.IOConsoleServiceImpl;
-import main.services.impl.RomanNumeralTranslatorServiceImpl;
-import main.models.ArithmeticExpression;
+import main.service.CalculatorService;
+import main.service.ExpressionBuilderService;
+import main.service.IOToolService;
+import main.service.NumeralTranslatorService;
+import main.service.impl.ArabicNumeralTranslatorServiceImpl;
+import main.service.impl.BuildExpressionServiceImpl;
+import main.service.impl.CalculatorServiceImpl;
+import main.service.impl.IOConsoleServiceImpl;
+import main.service.impl.RomanNumeralTranslatorServiceImpl;
+import main.model.ArithmeticExpression;
 
 public class Main {
     public static void main(String[] args) {

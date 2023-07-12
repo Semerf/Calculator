@@ -1,4 +1,4 @@
-package main.services;
+package main.service;
 
 public interface IOToolService {
     String[] readAndSplit() throws Exception;

@@ -1,8 +1,8 @@
-package main.services.impl;
+package main.service.impl;
 
-import main.services.ExpressionBuilderService;
-import main.services.NumeralTranslatorService;
-import main.models.ArithmeticExpression;
+import main.service.ExpressionBuilderService;
+import main.service.NumeralTranslatorService;
+import main.model.ArithmeticExpression;
 
 public class BuildExpressionServiceImpl implements ExpressionBuilderService {
     @Override
