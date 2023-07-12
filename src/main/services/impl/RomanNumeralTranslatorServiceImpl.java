@@ -1,6 +1,6 @@
-package main.interfaces.impl;
+package main.services.impl;
 
-import main.interfaces.NumeralTranslatorService;
+import main.services.NumeralTranslatorService;
 
 import java.util.HashMap;
 import java.util.Map;

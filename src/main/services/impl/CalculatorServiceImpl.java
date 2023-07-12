@@ -1,6 +1,6 @@
-package main.interfaces.impl;
+package main.services.impl;
 
-import main.interfaces.CalculatorService;
+import main.services.CalculatorService;
 import main.models.ArithmeticExpression;
 
 public class CalculatorServiceImpl implements CalculatorService {

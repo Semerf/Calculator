@@ -1,7 +1,7 @@
-package main.interfaces.impl;
+package main.services.impl;
 
-import main.interfaces.ExpressionBuilderService;
-import main.interfaces.NumeralTranslatorService;
+import main.services.ExpressionBuilderService;
+import main.services.NumeralTranslatorService;
 import main.models.ArithmeticExpression;
 
 public class BuildExpressionServiceImpl implements ExpressionBuilderService {

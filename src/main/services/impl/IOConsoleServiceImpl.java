@@ -1,6 +1,6 @@
-package main.interfaces.impl;
+package main.services.impl;
 
-import main.interfaces.IOToolService;
+import main.services.IOToolService;
 
 import java.util.Scanner;
 

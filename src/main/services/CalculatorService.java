@@ -1,4 +1,4 @@
-package main.interfaces;
+package main.services;
 
 import main.models.ArithmeticExpression;
 

@@ -1,10 +1,10 @@
 package main;
 
-import main.interfaces.CalculatorService;
-import main.interfaces.ExpressionBuilderService;
-import main.interfaces.IOToolService;
-import main.interfaces.NumeralTranslatorService;
-import main.interfaces.impl.*;
+import main.services.CalculatorService;
+import main.services.ExpressionBuilderService;
+import main.services.IOToolService;
+import main.services.NumeralTranslatorService;
+import main.services.impl.*;
 import main.models.ArithmeticExpression;
 
 public class Main {
