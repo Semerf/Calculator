@@ -1,6 +1,7 @@
-package interfaces;
+package main.interfaces;
 
-public interface Translator {
+public interface NumeralTranslator {
     int translateToInt(String str) throws Exception;
+
     String translateToString(int i) throws Exception;
 }

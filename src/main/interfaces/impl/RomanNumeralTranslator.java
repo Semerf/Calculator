@@ -1,11 +1,11 @@
-package services;
+package main.interfaces.impl;
 
-import interfaces.Translator;
+import main.interfaces.NumeralTranslator;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class RomanTranslator implements Translator {
+public class RomanNumeralTranslator implements NumeralTranslator {
     @Override
     public int translateToInt(String str) throws Exception {
         byte[] symbols = str.getBytes();
@@ -16,13 +16,13 @@ public class RomanTranslator implements Translator {
         dict.put('I', 1);
         dict.put('V', 5);
         dict.put('X', 10);
-        for ( byte symbol : symbols) {
-            if(dict.get((char) symbol) == null){
+        for (byte symbol : symbols) {
+            if (dict.get((char) symbol) == null) {
                 throw new Exception("Found no Roman number");
             }
         }
-        for(int i = symbols.length - 1; i >= 0; i--){
-            if(dict.get((char) symbols[i]) >= max) {
+        for (int i = symbols.length - 1; i >= 0; i--) {
+            if (dict.get((char) symbols[i]) >= max) {
                 result += dict.get((char) symbols[i]);
                 max = dict.get((char) symbols[i]);
 
@@ -30,15 +30,16 @@ public class RomanTranslator implements Translator {
                 result -= dict.get((char) symbols[i]);
             }
         }
-        if(result <=0){
+        if (result <= 0) {
             throw new Exception("Сonversion error");
         }
         return result;
     }
+
     @Override
-    public String translateToString(int input)  throws Exception{
+    public String translateToString(int input) throws Exception {
         StringBuilder str = new StringBuilder();
-        if(input / 10 == 1){
+        if (input / 10 == 1) {
             str.append('X');
             input -= 10;
         } else if (input / 10 == 2) {
@@ -47,7 +48,7 @@ public class RomanTranslator implements Translator {
         } else if (input / 10 > 2) {
             throw new Exception("too large a number");
         }
-        switch (input){
+        switch (input) {
             case 1:
                 str.append("I");
                 break;
@@ -57,7 +58,7 @@ public class RomanTranslator implements Translator {
             case 3:
                 str.append("III");
                 break;
-            case  4:
+            case 4:
                 str.append("IV");
                 break;
             case 5:

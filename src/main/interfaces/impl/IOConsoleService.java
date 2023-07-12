@@ -1,23 +1,23 @@
-package services;
+package main.interfaces.impl;
 
-import interfaces.IOutil;
+import main.interfaces.IOTool;
 
 import java.util.Scanner;
 
-public class IOService implements IOutil {
+public class IOConsoleService implements IOTool {
 
     @Override
-    public String[] read() throws Exception{
+    public String[] readAndSplit() throws Exception {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите ваше выражение");
         String inputStr = sc.nextLine();
         sc.close();
-        String[] els = inputStr.split(" ");
-        if (els.length !=3){
+        String[] elements = inputStr.split(" ");
+        if (elements.length != 3) {
             throw new Exception();
         }
         System.out.println(inputStr);
-        return els;
+        return elements;
     }
 
     @Override

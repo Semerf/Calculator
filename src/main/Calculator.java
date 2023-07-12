@@ -1,50 +1,51 @@
 package main;
 
-import interfaces.Splitter;
-import interfaces.IOutil;
-import interfaces.Translator;
-import services.ArabicTranslator;
-import services.IOService;
-import services.RomanTranslator;
-import services.SplitService;
+import main.interfaces.ExpressionBuilder;
+import main.interfaces.IOTool;
+import main.interfaces.NumeralTranslator;
+import main.interfaces.impl.ArabicNumeralTranslator;
+import main.interfaces.impl.IOConsoleService;
+import main.interfaces.impl.RomanNumeralTranslator;
+import main.interfaces.impl.BuildExpressionService;
 
 public class Calculator {
     public static void main(String[] args) {
-        IOutil ioutil = new IOService();
-        Splitter splitter = new SplitService();
-        Translator translator;
+        IOTool ioTool = new IOConsoleService();
+        ExpressionBuilder expressionBuilder = new BuildExpressionService();
+        NumeralTranslator numeralTranslator;
         ArithmeticExpression expression;
         try {
-            expression = splitter.SplitInputString(ioutil.read());
+            expression = expressionBuilder.constructExpressionFromArrayInputStrings(ioTool.readAndSplit());
             int result = calculate(expression);
             if (expression.isRoman()) {
-                translator = new RomanTranslator();
+                numeralTranslator = new RomanNumeralTranslator();
             } else {
-                translator = new ArabicTranslator();
+                numeralTranslator = new ArabicNumeralTranslator();
             }
-            ioutil.write(translator.translateToString(result));
-        } catch (Exception e){
+            ioTool.write(numeralTranslator.translateToString(result));
+        } catch (Exception e) {
             System.out.println(e);
             System.exit(-1);
         }
     }
-    public static int calculate(ArithmeticExpression expression) throws Exception{
+
+    public static int calculate(ArithmeticExpression expression) throws Exception {
         int result = 0;
-        switch (expression.getOperation()){
+        switch (expression.getOperation()) {
             case '+':
                 result = expression.getFirstInt() + expression.getSecondInt();
                 break;
-            case  '-':
-                result = expression.getFirstInt()-expression.getSecondInt();
+            case '-':
+                result = expression.getFirstInt() - expression.getSecondInt();
                 break;
             case '/':
-                result = expression.getFirstInt()/expression.getSecondInt();
+                result = expression.getFirstInt() / expression.getSecondInt();
                 break;
             case '*':
-                result = expression.getFirstInt()*expression.getSecondInt();
+                result = expression.getFirstInt() * expression.getSecondInt();
                 break;
         }
-        if(result < 1 && expression.isRoman()) {
+        if (result < 1 && expression.isRoman()) {
             throw new Exception("Roman numerals cannot be less than 1");
         }
 

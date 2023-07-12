@@ -29,4 +29,4 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-/src/services/SplitService.java
+/src/main/interfaces/impl/SplitService.java
